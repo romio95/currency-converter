@@ -1,0 +1,86 @@
+@mixin size($width, $height: $width) {
+  width: $width;
+  height: $height;
+}
+
+@mixin input-placeholder {
+  &.placeholder {
+    @content
+  }
+
+  &:-moz-placeholder {
+    @content
+  }
+
+  &::-moz-placeholder {
+    @content
+  }
+
+  &:-ms-input-placeholder {
+    @content
+  }
+
+  &::-webkit-input-placeholder {
+    @content
+  }
+
+}
+
+@mixin input-autofill {
+  &:-webkit-autofill {
+    @content
+  }
+
+  &:-webkit-autofill:hover {
+    @content
+  }
+
+  &:-webkit-autofill:focus {
+    @content
+  }
+}
+// Query Breakpoints
+@mixin respondTo ($max-width) {
+  @media screen and (max-width: $max-width) {
+    @content;
+  }
+}
+
+
+// TRUNCATE
+@mixin truncate($truncation-boundary: none) {
+  max-width: $truncation-boundary;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@mixin filter() {
+  backface-visibility: hidden;
+  perspective: 1000px;
+  transform: translate3d(0,0,0)
+}
+
+
+// POSITION
+@mixin position($position, $top:null, $right: '', $bottom: null, $left: null) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+@mixin absolute($args...) {
+  @include position(absolute, $args...)
+}
+
+@mixin relative($args...) {
+  @include position(relative, $args...)
+}
+
+@mixin fixed($args...) {
+  @include position(fixed, $args...)
+}
+
+/* ----- end MIXINS ----- */

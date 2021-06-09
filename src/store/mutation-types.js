@@ -1,0 +1,1 @@
+export const SHOW_GLOBAL_LOADER = 'SHOW_GLOBAL_LOADER';

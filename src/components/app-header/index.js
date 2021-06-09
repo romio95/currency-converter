@@ -1,6 +1,6 @@
 
 export default {
-  name: 'list',
+  name: 'app-header',
   data() {
     return {}
   },

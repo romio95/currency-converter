@@ -1,4 +1,4 @@
-export const GET_ABOUT_LIST = 'GET_ABOUT_LIST';
+export const GET_LIST = 'GET_LIST';
 
 
 

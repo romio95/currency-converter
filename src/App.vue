@@ -15,6 +15,7 @@
 <script>
 
 import appHeader from '@/components/app-header/index.vue'
+import {mapActions, mapGetters} from "vuex";
 export default {
   name: 'App',
   data(){
@@ -24,5 +25,20 @@ export default {
   components: {
     appHeader
   },
+  computed: {
+    ...mapGetters({
+      valutes: 'list/valutes',
+    }),
+  },
+  created(){
+    if( this.valutes.length <= 0){
+      this.getList();
+    }
+  },
+  methods: {
+    ...mapActions({
+      getList: 'list/GET_LIST',
+    }),
+  }
 }
 </script>

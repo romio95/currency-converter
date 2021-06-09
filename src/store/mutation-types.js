@@ -1,1 +1,2 @@
-export const SHOW_GLOBAL_LOADER = 'SHOW_GLOBAL_LOADER';
+export const SET_LIST = 'SET_LIST';
+export const CHANGE_LOADING = 'CHANGE_LOADING';

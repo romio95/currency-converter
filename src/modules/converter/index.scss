@@ -1,3 +1,13 @@
 .converter {
-
+  &-top{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    &__left{
+      width: 50%;
+    }
+    &__right{
+      width: 50%;
+    }
+  }
 }

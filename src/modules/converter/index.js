@@ -1,11 +1,16 @@
-import {mapGetters, mapActions, mapMutations} from 'vuex';
+import Vue from 'vue';
+import vSelect from 'vue-select'
+Vue.component('v-select', vSelect)
+import 'vue-select/dist/vue-select.css';
+
+import {mapGetters} from 'vuex';
 export default {
   name: 'converter',
   data() {
     return {
       selected: ['RUB', 'USD'],
-      inputed: "",
-      result: null,
+      inputed: 0,
+      result: 0,
     }
   },
   computed: {

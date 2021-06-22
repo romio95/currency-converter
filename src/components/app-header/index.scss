@@ -1,4 +1,5 @@
 .app-header{
+  background: gray;
   &__list{
     width: 100%;
     display: flex;
@@ -8,12 +9,20 @@
   }
   &__item{
     display: flex;
+    justify-content: center;
     padding: 20px;
+    min-width: 320px;
     color: $black;
     text-decoration-color: transparent;
     transition: text-decoration-color $trans;
-    &:hover{
-      text-decoration-color: $black;
+    background: white;
+    border: 1px solid #cecece;
+    @include respondTo(800px){
+      min-width: auto;
+      width: 50%;
+    }
+    &.router-link-active{
+      font-weight: bold;
     }
   }
 }

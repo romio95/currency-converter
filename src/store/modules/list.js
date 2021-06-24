@@ -26,7 +26,6 @@ const actions = {
     try {
       commit(CHANGE_LOADING, true)
       const response = await $http(`https://www.cbr-xml-daily.ru/daily_json.js`)
-      console.log(response.data.Valute);
       commit(SET_LIST, response.data.Valute)
     } catch (e) {
       console.log(e);

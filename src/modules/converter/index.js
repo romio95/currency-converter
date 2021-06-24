@@ -2,6 +2,7 @@ import Vue from 'vue';
 import vSelect from 'vue-select'
 Vue.component('v-select', vSelect)
 import 'vue-select/dist/vue-select.css';
+import loader from '../../components/Loader.vue'
 
 import {mapGetters} from 'vuex';
 export default {
@@ -13,10 +14,13 @@ export default {
       result: 0,
     }
   },
+  components: {
+    loader
+  },
   computed: {
     ...mapGetters({
       valutes: 'list/valutes',
-      countries: 'list/countries',
+      countries: 'list/countries'
     }),
   },
   methods: {
@@ -37,7 +41,6 @@ export default {
       let result = (firstValuteValue / firstValuteNominal) / (secondValuteValue / secondValuteNominal);
       // Rounding to ten thousandths
       this.result = result ? Math.floor(result * 10000) / 10000 : null;
-      console.log('result--------------',this.valutes);
     }
   },
 }

@@ -1,5 +1,6 @@
 <template>
   <div id="app" class="app">
+    <loader />
     <app-header />
     <div class="app-container">
       <transition name="component-fade" mode="out-in">
@@ -15,6 +16,7 @@
 <script>
 
 import appHeader from '@/components/app-header/index.vue'
+import loader from '@/components/Loader.vue'
 import {mapActions, mapGetters} from "vuex";
 export default {
   name: 'App',
@@ -23,7 +25,8 @@ export default {
     }
   },
   components: {
-    appHeader
+    appHeader,
+    loader
   },
   computed: {
     ...mapGetters({
